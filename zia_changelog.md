@@ -8,3 +8,8 @@ Zia's Change Log
 * Completed project plan
 * Created development plan file
   * Filled in version descriptions, tasks yet to be assigned
+### 05/29/2026
+* Created game flowchart in [Canva](https://canva.link/hocyaqg51uah9pm) (WIP)
+* Minor updates to plan file
+  * Added alive attribute to Character class
+  * Added flowchart link

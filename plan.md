@@ -1,10 +1,11 @@
 ## Project Plan
 Labubu And Minion War Battle
 ### Gameplay Plan
-TBA
+[Canva Flowchart Link](https://canva.link/hocyaqg51uah9pm)
 ### Requirements List
 **Basic Game**  
 * Character class
+  * alive (bool)
   * health (int)
   * max health (int)
   * dmg (int)
