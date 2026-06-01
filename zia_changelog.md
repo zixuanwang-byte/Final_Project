@@ -16,3 +16,5 @@ Zia's Change Log
 ### 06/01/2026
 * Added project timeline to development plan file
   * Timeline written by Twishha in a Google Doc. I copied it into md file.
+* Adjustments to plan file for more detailed plan
+* Assigned tasks in development file (subject to refinement)
