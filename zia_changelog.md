@@ -13,3 +13,6 @@ Zia's Change Log
 * Minor updates to plan file
   * Added alive attribute to Character class
   * Added flowchart link
+### 06/01/2026
+* Added project timeline to development plan file
+  * Timeline written by Twishha in a Google Doc. I copied it into md file.
