@@ -28,3 +28,43 @@ Additional shop items that grant various boosts in consecutive battle when used 
 
 **Zia's Tasks**  
 - TBA
+## Timeline
+### 1 June
+*Version 1*
+* Starting Making Game
+* 2  attack options for each characters
+* Short story lines
+* Attacks, health
+* ending
+### 2 June 
+* Try to finish making 1st version
+### 3 June 
+*Version 2*
+* Start version 2
+* Add more in version 2
+* 4 attack options for each characters
+* More story lines
+* ending
+### 4 June
+* Try to finish Version 2 with more options 
+### 5 June 
+*Version 3*
+* Start version 3
+* Add more in final version 3 
+* Put all attack options for each characters
+* Final detail story line
+* Proper ending
+### 6 June
+* Try to finish final version 3 
+### 7 June
+* Testing the final version of game
+* Edit some code if you need
+### 8 June 
+*Beta Testing*
+* Testing the code
+### 9 June 
+* Do some changes in code
+### 10 June 
+*Project due at 10 P.M.*
+* Final time check the code
+* Hand in before 10 p.m.
