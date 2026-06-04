@@ -18,3 +18,11 @@ Zia's Change Log
   * Timeline written by Twishha in a Google Doc. I copied it into md file.
 * Adjustments to plan file for more detailed plan
 * Assigned tasks in development file (subject to refinement)
+### 06/03/2026
+* Created character module and moves module (untested)
+* Pushed to branch 1.0
+### 06/04/2026
+* Updated character module
+  * Finished up code for Character class
+  * Added Player child class and Enemy child class
+  * Tested with test characters and moves, success

@@ -1,6 +1,6 @@
-# Idk if this works.
-
+from random import choice
 from moves import Moves
+
 
 class Character:
     def __init__(self, name, alive, health, max_health, moves):
@@ -25,18 +25,37 @@ class Character:
         if self.health <= 0:
             self.health = 0
             self.alive = False
-            print(f"{self} has been defeated!")
+            print(f"\n{self} has been defeated!")
     
-    def deal_damage(self, damage, target):
+    def deal_damage(self, move, target):
+        damage = move.get_damage()
         target.take_damage(damage)
-        print(f"{self} deals {damage} damage to {target}!")
+        print(f"\n{self} uses {move} and deals {damage} damage to {target}!")
 
+
+class Player(Character):
+    def __init__(self, name, alive, health, max_health, moves):
+        Character.__init__(self, name, alive, health, max_health, moves)
+    
     def use_move(self, enemy):
-        print("\nWhich move would you like to use?")
-        for move in self.moves:
-            print(f" - {move}")
-        chosen_move = input("Your choice: ")
-        if chosen_move in self.moves.items():
-            damage_dealt = chosen_move.get_damage()
-            self.deal_damage(damage_dealt, enemy)
-        pass
+        while True:
+            print("\nWhich move would you like to use?")
+            for move in self.moves:
+                print(f" - {move}")
+            player_choice = input("Your choice: ")
+            if player_choice.lower() in self.moves.keys():
+                chosen_move = self.moves[player_choice]
+                self.deal_damage(chosen_move, enemy)
+                break
+            else:
+                print("u stoopid")
+
+
+class Enemy(Character):
+    def __init__(self, name, alive, health, max_health, moves):
+        Character.__init__(self, name, alive, health, max_health, moves)
+        self.moves_list = list(self.moves.values())
+    
+    def attack(self, player):
+        chosen_move = choice(self.moves_list)
+        self.deal_damage(chosen_move, player)
