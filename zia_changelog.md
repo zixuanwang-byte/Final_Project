@@ -26,3 +26,7 @@ Zia's Change Log
   * Finished up code for Character class
   * Added Player child class and Enemy child class
   * Tested with test characters and moves, success
+### 06/05/2026
+* Minor update to character module
+  * Moved moves attribute from parent class to child classes, damage calculations are now performed in the child classes.
+  * Custom attack message for Player and Enemy child classes
