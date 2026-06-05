@@ -1,6 +1,7 @@
 from character import Player, Enemy
 from moves import Moves
 
+# Test code for classes. Comment out or delete later.
 move1 = Moves("test move 1", [1, 5])
 move2 = Moves("test move 2", [2, 3])
 test_moves_player = {"move 1": move1, "move 2": move2}
