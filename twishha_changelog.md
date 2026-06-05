@@ -9,3 +9,7 @@ May 27, 2026
 * Write some ideas of game function in basic list
 * Made time line 
 * Made story
+June 1,2026
+* Finished the story
+June 4, 2026
+* Make map for game
