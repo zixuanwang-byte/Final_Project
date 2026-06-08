@@ -3,7 +3,7 @@ from random import choice
 
 class Character:
     '''A simple character class that holds basic character stats, and 
-    method to take damage.
+    methods to view health, take damage, and heal.
     '''
     def __init__(self, name, alive, health, max_health):
         '''Attribute data types:
@@ -20,8 +20,13 @@ class Character:
     def __str__(self):
         return self.name
     
+    def view_health(self):
+        '''Print current health value of referenced object.'''
+        print(f"{self} is a at {self.health} health!")
+
     def take_damage(self, damage):
         '''Take damage, aka decrease health value of referenced object.
+        - Parameter descriptions:
         damage - int - amount of health to remove
         '''
         self.health -= damage
@@ -29,6 +34,16 @@ class Character:
             self.health = 0
             self.alive = False
             print(f"\n{self} has been defeated!")
+
+    def heal(self, heal_amount):
+        '''Increace health of referenced object. Health value cannot 
+        exceed value of max_health attribute.
+        - Parameter descriptions:
+        heal_amount - int - amount of health to add
+        '''
+        self.health += heal_amount
+        if self.health > self.max_health:
+            self.health = self.max_health
 
 
 class Player(Character):

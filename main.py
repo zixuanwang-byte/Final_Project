@@ -11,3 +11,6 @@ test_char2 = Enemy("test char 2", True, 10, 10, test_moves_enemy)
 
 test_char1.use_move(test_char2)
 test_char2.attack(test_char1)
+
+test_char1.view_health()
+test_char2.view_health()
