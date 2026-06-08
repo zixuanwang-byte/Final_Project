@@ -22,7 +22,7 @@ class Character:
     
     def take_damage(self, damage):
         '''Take damage, aka decrease health value of referenced object.
-        damage - int - amount of damage to remove
+        damage - int - amount of health to remove
         '''
         self.health -= damage
         if self.health <= 0:
