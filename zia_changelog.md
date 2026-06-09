@@ -33,5 +33,18 @@ Zia's Change Log
 * Updated comments in py files
   * All comments required by PEP8 have been added. (I think)
 ### 06/08/2026
+<<<<<<< Updated upstream
 * Fixed typo in comments
 * Pushed update from last change. Forgot to last time.
+=======
+* Fixed typo and inconsistency in module comments
+* Added view_health() method to Character class
+* Created inventory module in 2.0 (untested)
+  * Inventory class with following attributes/methods: 
+    * name
+    * capacity
+    * items
+    * view_inventory()
+    * add_item()
+    * remove_item()
+>>>>>>> Stashed changes

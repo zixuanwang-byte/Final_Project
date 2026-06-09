@@ -22,7 +22,12 @@ class Character:
     
     def take_damage(self, damage):
         '''Take damage, aka decrease health value of referenced object.
+<<<<<<< Updated upstream
         damage - int - amount of health to remove
+=======
+        - Parameter descriptions:
+        - damage - int - amount of health to remove
+>>>>>>> Stashed changes
         '''
         self.health -= damage
         if self.health <= 0:
@@ -30,6 +35,19 @@ class Character:
             self.alive = False
             print(f"\n{self} has been defeated!")
 
+<<<<<<< Updated upstream
+=======
+    def heal(self, heal_amount):
+        '''Increace health of referenced object. Health value cannot 
+        exceed value of max_health attribute.
+        - Parameter descriptions:
+        - heal_amount - int - amount of health to add
+        '''
+        self.health += heal_amount
+        if self.health > self.max_health:
+            self.health = self.max_health
+
+>>>>>>> Stashed changes
 
 class Player(Character):
     '''Character child class with added moves attribute, and 
