@@ -1,14 +1,13 @@
 class Inventory:
-    '''A simple inventory class that holds inventory name, inventory 
-    capacity, and a list which represents items in inventory.
+    '''A simple inventory class that holds inventory name, and a list 
+    which represents items in inventory.
     '''
-    def __init__(self, name, capacity):
+    def __init__(self, name):
         '''Attribute data types:
         name - str
         capacity - int
         '''
         self.name = name
-        self.capacity = capacity
         self.items = []
     
     def __str__(self):
@@ -19,11 +18,11 @@ class Inventory:
         inventory message.
         '''
         if len(self.items) > 0:
-            print(self)
+            print(f"\n{self}")
             for item in self.items:
                 print(f" - {item}")
         else:
-            print(f"{self} is empty!")
+            print(f"\n{self} is empty!")
 
     def add_item(self, item):
         '''Add an item to items list of referenced object.
@@ -38,3 +37,10 @@ class Inventory:
         - item - any data type - item to remove
         '''
         self.items.remove(item)
+    
+    def update_inventory(self, items_list):
+        '''Overwrite current inventory list with provided list.
+        - Parameter descriptions:
+        - items_list - list - new list to replace current list
+        '''
+        self.items = items_list

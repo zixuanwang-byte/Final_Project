@@ -1,4 +1,5 @@
 from random import choice
+from inventory import Inventory
 
 
 class Character:
@@ -22,12 +23,8 @@ class Character:
     
     def take_damage(self, damage):
         '''Take damage, aka decrease health value of referenced object.
-<<<<<<< Updated upstream
-        damage - int - amount of health to remove
-=======
         - Parameter descriptions:
         - damage - int - amount of health to remove
->>>>>>> Stashed changes
         '''
         self.health -= damage
         if self.health <= 0:
@@ -35,8 +32,6 @@ class Character:
             self.alive = False
             print(f"\n{self} has been defeated!")
 
-<<<<<<< Updated upstream
-=======
     def heal(self, heal_amount):
         '''Increace health of referenced object. Health value cannot 
         exceed value of max_health attribute.
@@ -47,7 +42,6 @@ class Character:
         if self.health > self.max_health:
             self.health = self.max_health
 
->>>>>>> Stashed changes
 
 class Player(Character):
     '''Character child class with added moves attribute, and 
@@ -59,6 +53,8 @@ class Player(Character):
         moves - dictionary of move names with corresponding Moves objects
         '''
         self.moves = moves
+        self.inventory = Inventory(f"{self}'s Inventory")
+        self.currency = 0
 
     
     def use_move(self, target):
@@ -86,18 +82,45 @@ class Player(Character):
                 break
             else:
                 print("u stoopid")
+    
+    def add_currency(self, amount):
+        '''Increase currency value of referenced object.
+        - Parameter descriptions:
+        - amount - int - amount of currency to add
+        '''
+        self.currency += amount
+    
+    def remove_currency(self, amount):
+        '''Decrease currency value of referenced object. Currency value
+        cannot be less than 0.
+        - Parameter descriptions:
+        - amount - int - amount of currency to remove
+        '''
+        self.currency -= amount
+        if self.currency < 0:
+            self.currency = 0
+    
+    def update_currency(self, amount):
+        '''Overwrite currency value of referenced object with provided 
+        value.
+        - Parameter descriptions:
+        - amount - int - new value to replace current value
+        '''
+        self.currency = amount
 
 
 class Enemy(Character):
     '''Character child class with added moves attribute, and attack 
     method which chooses a random move to use.
     '''
-    def __init__(self, name, alive, health, max_health, moves):
+    def __init__(self, name, alive, health, max_health, moves, loot_amount):
         Character.__init__(self, name, alive, health, max_health)
         '''Attribute data types:
         moves - list of Moves objects
+        loot_amount - int
         '''
         self.moves = moves
+        self.loot_amount = loot_amount
     
     def attack(self, target):
         '''Choose a random move from moves listed in moves attribute, 

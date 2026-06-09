@@ -13,8 +13,8 @@ One singular battle between 1 Minion and 1 Labubu. Player chooses Minion's moves
 - write battle function
 
 **Zia's Tasks**
-- make Character class and child classes
-- make Move class
+- ~~make Character class and child classes~~
+- ~~make Move class~~
 ### 2.0
 Labubus drop currency when defeated. After defeating a Labubu, player chooses to fight more Labubus, shop, or quit. Can buy healing potion from shop.
 

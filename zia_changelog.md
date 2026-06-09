@@ -33,10 +33,6 @@ Zia's Change Log
 * Updated comments in py files
   * All comments required by PEP8 have been added. (I think)
 ### 06/08/2026
-<<<<<<< Updated upstream
-* Fixed typo in comments
-* Pushed update from last change. Forgot to last time.
-=======
 * Fixed typo and inconsistency in module comments
 * Added view_health() method to Character class
 * Created inventory module in 2.0 (untested)
@@ -47,4 +43,9 @@ Zia's Change Log
     * view_inventory()
     * add_item()
     * remove_item()
->>>>>>> Stashed changes
+### 06/09/2026
+* Resolved file conflicts
+* Tested Inventory class (success)
+* Removed capacity attribute from Inventory class  (don't see any use for it for a simple game like this)
+* Implemented inventory and currency system into Player child class
+* Added loot_amount attribute to Enemy child class
