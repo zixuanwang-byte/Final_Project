@@ -8,13 +8,13 @@ Labubu And Minion War Battle
 One singular battle between 1 Minion and 1 Labubu. Player chooses Minion's moves, Labubu's moves are randomized. Game ends when either character is defeated.
 
 **Twishha's Tasks**
-- write story
+- ~~write story~~
 - create character stats (health, attacks, etc.)
-- write battle function
+- ~~write battle function~~
 
 **Zia's Tasks**
-- make Character class and child classes
-- make Move class
+- ~~make Character class and child classes~~
+- ~~make Move class~~
 ### 2.0
 Labubus drop currency when defeated. After defeating a Labubu, player chooses to fight more Labubus, shop, or quit. Can buy healing potion from shop.
 

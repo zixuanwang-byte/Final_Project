@@ -27,6 +27,11 @@ Zia's Change Log
   * Added Player child class and Enemy child class
   * Tested with test characters and moves, success
 ### 06/05/2026
-* Minor update to character module
+* Minor update to code of character module
   * Moved moves attribute from parent class to child classes, damage calculations are now performed in the child classes.
   * Custom attack message for Player and Enemy child classes
+* Updated comments in py files
+  * All comments required by PEP8 have been added. (I think)
+### 06/08/2026
+* Fixed typo and inconsistency in module comments
+* Added view_health() method to Character class
