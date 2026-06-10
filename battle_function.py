@@ -22,5 +22,6 @@ def battle(self, Player, Enemy):
 
         if self.health <= 0:
             print(f"{self.name} was loose in this battle.")
+            break 
 
 battle(Player, Minion, Labubu)
