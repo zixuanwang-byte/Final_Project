@@ -44,3 +44,8 @@ class Inventory:
         - items_list - list - new list to replace current list
         '''
         self.items = items_list
+
+
+class Shop(Inventory):
+    def __init__(self, name):
+        Inventory.__init__(self, name)

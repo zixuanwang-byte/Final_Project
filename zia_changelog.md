@@ -49,3 +49,8 @@ Zia's Change Log
 * Removed capacity attribute from Inventory class  (don't see any use for it for a simple game like this)
 * Implemented inventory and currency system into Player child class
 * Added loot_amount attribute to Enemy child class
+### 06/10/2026
+* Created Item class
+  * Currently only holds attributes
+* Created Shop child class of Inventory
+  * Currently only has initialization function
