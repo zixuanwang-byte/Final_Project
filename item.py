@@ -3,7 +3,7 @@ class Item:
     def __init__(self, name, effect, effect_quantity, price):
         '''Attribute data types:
         name - str
-        effect - str, "heal"
+        effect - str
         effect_quantity - int
         price - int
         '''
