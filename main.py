@@ -15,25 +15,18 @@ test_char2.attack(test_char1)
 test_char1.view_health()
 test_char2.view_health()'''
 
-attacks = {
-    minion_banana :[
+battle_attacks = {
+    "minion_banana" :[
         "Fire Banana", 
         "Water Banana", 
         "Iron Fail Banana", 
         "Cannon Banana", 
-        "Bubble Banana"],
+        "Bubble Banana"]}
     
-    Labubu_ball : [
-        "Bubble ball",
-        "Iron Fail ball", 
-        "Cannon ball", 
-        "Fire ball", 
-        "Water ball"]}
+Labubu_ball = [ "Bubble ball", "Iron Fail ball", "Cannon ball", "Fire ball", "Water ball"]
 
-Labubu_attacks = {"Fire": Fire ball, "Bubble": Bubble ball, "Iron": Iron Fail ball,
-                 "Cannon": Cannon ball, "Water": Water ball}
-minion_attacks = {"Bubble": Bubble Banana, "Water": Water Banana, "Iron": Iron Fail Banana,
-                 "Fire": Fire Banana, "Cannon": Cannon Banana}
+minion_attacks = {"Bubble": "Bubble Banana", "Water": "Water Banana", "Iron": "Iron Fail Banana",
+                 "Fire": "Fire Banana", "Cannon": "Cannon Banana"}
 
 def battle_atttacks():
     print("\n Which Banana type you like to use for attack?")
@@ -58,7 +51,7 @@ def move(self, direction):
     
     print(f"{self.name} moved to the {direction}.")
 
-player = Character("Minion")
+player = Player("Minion")
 
 player.move("north")
 player.move("west")
