@@ -15,5 +15,34 @@ test_char2.attack(test_char1)
 test_char1.view_health()
 test_char2.view_health()'''
 
-minion_banana = ["Fire Banana", "Water Banana", "Iron Fail Banana", "Cannon Banana", "Bubble Banana"]
-Labubu_ball = ["Bubble ball", "Iron Fail ball", "Cannon ball", "Fire ball", "Water ball"]
+attacks = {
+    minion_banana :[
+        "Fire Banana", 
+        "Water Banana", 
+        "Iron Fail Banana", 
+        "Cannon Banana", 
+        "Bubble Banana"],
+    
+    Labubu_ball : [
+        "Bubble ball",
+        "Iron Fail ball", 
+        "Cannon ball", 
+        "Fire ball", 
+        "Water ball"]}
+
+def move(self, direction):
+    if direction == "north":
+        self.x += 1
+    elif direction == "east":
+        self.x -= 1
+    elif direction == "south":
+        self.y += 1
+    elif direction == "west":
+        self.y -= 1
+    
+    print(f"{self.name} moved to the {direction}.")
+
+player = Character("Minion")
+
+player.move("north")
+player.move("west")
