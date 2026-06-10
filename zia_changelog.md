@@ -35,3 +35,5 @@ Zia's Change Log
 ### 06/08/2026
 * Fixed typo and inconsistency in module comments
 * Added view_health() method to Character class
+### 06/10/2026
+* In Character class, moved y attribute to be after x attribute

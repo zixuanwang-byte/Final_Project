@@ -16,8 +16,8 @@ class Character:
         self.alive = alive
         self.health = health
         self.max_health = max_health
-        self.y = 0
         self.x = 0
+        self.y = 0
     
     def __str__(self):
         return self.name
