@@ -54,3 +54,8 @@ Zia's Change Log
   * Currently only holds attributes
 * Created Shop child class of Inventory
   * Currently only has initialization function
+### 06/11/2026
+* Created open_shop method in Shop child class (no work)
+  * Can not handle user input correctly, treats all input as invalid
+* Minor update to Player child class of Character class
+  * use_move method now uses .capitalize() for input handling instead of .lower()
