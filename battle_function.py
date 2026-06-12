@@ -1,6 +1,5 @@
 from character import Player, Enemy 
-from Player import use_move
-from Enemy import attack 
+ 
 
 Minion = Player("minion", True, 10, 10)
 Labubu = Enemy("Labubu", True, 10, 10)
