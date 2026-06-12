@@ -67,18 +67,34 @@ class Shop(Inventory):
             if len(self.items) <= 0:
                 print(f"\n{self} is empty!")
                 break
+            # Print shop items and collect input.
             print("\nWhat would you like to buy?")
+            shopper.view_balance()
             for item in self.items:
                 print(f" - {item} ${item.price}")
+            print(" - cancel")
             player_choice = input("Your choice: ").capitalize()
+            # Handling input.
+            if player_choice == "Cancel":
+                break
+            # Check if inputted string corresponds to any in-game item.
             try:
                 chosen_item = items_dict[player_choice]
-                if (chosen_item in self.items 
-                    and chosen_item.price <= shopper.currency):
-                    self.items.remove(chosen_item)
-                    shopper.items.add(chosen_item)
-                    shopper.decrease_currency(chosen_item.price)
-                    break
             except:
+                # Error message for string that does not correspond to 
+                # any Item object.
                 print("u stoopid")
-
+                continue
+            # Check if item is in shop.
+            if chosen_item in self.items:
+                # Check if player has enough currency.
+                if chosen_item.price <= shopper.currency:
+                    # self.items.remove(chosen_item)
+                    shopper.inventory.add_item(chosen_item)
+                    shopper.remove_currency(chosen_item.price)
+                    print(f"\nSuccessfully purchased {chosen_item}!")
+                    shopper.view_balance()
+                else:
+                    print(f"You're too broke to buy {chosen_item} XD")
+            else:
+                print(f"{chosen_item} is out of stock!")

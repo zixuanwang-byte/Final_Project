@@ -77,7 +77,7 @@ class Player(Character):
                 chosen_move = self.moves[player_choice]
                 damage_dealt = chosen_move.get_damage()
                 target.take_damage(damage_dealt)
-                print(f"\nYou use {chosen_move} and deals {damage_dealt} damage "
+                print(f"\nYou use {chosen_move} and deal {damage_dealt} damage "
                       + f"to {target}!")
                 break
             else:
@@ -107,6 +107,10 @@ class Player(Character):
         - amount - int - new value to replace current value
         '''
         self.currency = amount
+    
+    def view_balance(self):
+        ''' Print player's currency value. '''
+        print(f"Your balance: ${self.currency}")
 
 
 class Enemy(Character):
