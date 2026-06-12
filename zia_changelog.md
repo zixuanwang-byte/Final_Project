@@ -59,3 +59,7 @@ Zia's Change Log
   * Can not handle user input correctly, treats all input as invalid
 * Minor update to Player child class of Character class
   * use_move method now uses .capitalize() for input handling instead of .lower()
+### 06/12/2026
+* open_shop() now handles user input properly
+* Fixed typo in one of Player child class' print statements
+* Added view_balance() method to Player child class
