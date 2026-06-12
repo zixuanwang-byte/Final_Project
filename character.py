@@ -75,13 +75,13 @@ class Player(Character):
             print("\nWhich move would you like to use?")
             for move in self.moves:
                 print(f" - {move}")
-            player_choice = input("Your choice: ")
-            if player_choice.lower() in self.moves.keys():
+            player_choice = input("Your choice: ").capitalize()
+            if player_choice in self.moves.keys():
                 chosen_move = self.moves[player_choice]
                 damage_dealt = chosen_move.get_damage()
                 target.take_damage(damage_dealt)
-                print(f"\nYou use {chosen_move} and deals {damage_dealt} damage "
-                      + f"to {target}!")
+                print(f"\nYou use {chosen_move} and deal {damage_dealt} "
+                      + f"damage to {target}!")
                 break
             else:
                 print("u stoopid")

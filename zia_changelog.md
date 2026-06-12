@@ -37,3 +37,8 @@ Zia's Change Log
 * Added view_health() method to Character class
 ### 06/10/2026
 * In Character class, moved y attribute to be after x attribute
+### 06/12/2026
+* Minor adjustments to Player child class
+  * Fixed typo in a print statement
+  * Reduced line length to follow PEP8
+  * Uses .capitalize() when dealing with input
