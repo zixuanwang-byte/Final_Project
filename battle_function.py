@@ -1,27 +1,32 @@
 from character import Player, Enemy 
-from moves import Move
-from character import Player, Enemy
+from Player import use_move
+from Enemy import attack 
 
-Minion = Player("minion", True, 10, 10, 1, )
-Labubu = Enemy("Labubu", True, 10, 10, 1)
+Minion = Player("minion", True, 10, 10)
+Labubu = Enemy("Labubu", True, 10, 10)
 
 
 # battle functions
-def battle(self, Player, Enemy):
-    print(f"{Player.name} is battling with {Enemy.name}.")
-    while self.health > 0 and Enemy.health > 0 :
-        Enemy.health -= self.attack
-        print(f"{self.name} do the attacks on {Enemy.name}.")
+def battle(player, enemy):
+    attack = 1
 
-        if Enemy.health <= 0:
-            print(f"{Enemy.name} was loose in this battle.")
+    print(f"{player.name} is battling with {enemy.name}.")
+
+    while player.health > 0 and enemy.health > 0 :
+        #enemy.health -= player.attack
+        player.use_move(enemy)
+        print(f"{player.name} do the attacks on {enemy.name}.")
+
+        if enemy.health <= 0:
+            print(f"{enemy.name} was loose in this battle.")
             break
         
-        self.health -= Enemy.attack
-        print(f"{Enemy.name} attacks on you.")
+        #player.health -= enemy.attack
+        enemy.attack(player)
+        print(f"{enemy.name} attacks on you.")
 
-        if self.health <= 0:
-            print(f"{self.name} was loose in this battle.")
+        if player.health <= 0:
+            print(f"{player.name} was loose in this battle!")
             break 
 
-battle(Player, Minion, Labubu)
+battle(Minion, Labubu)

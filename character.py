@@ -18,6 +18,7 @@ class Character:
         self.max_health = max_health
         self.x = 0
         self.y = 0
+        self.attack = attack
     
     def __str__(self):
         return self.name
