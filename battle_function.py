@@ -1,31 +1,46 @@
-from character import Player, Enemy 
- 
+from character import Player, Enemy
+from moves import Moves
 
-Minion = Player("minion", True, 10, 10)
-Labubu = Enemy("Labubu", True, 10, 10)
+# ---------------- MOVES ----------------
+fire = Moves("Fire", [1, 5])
+water = Moves("Water", [1, 5])
+iron = Moves("Iron", [1, 5])
+cannon = Moves("Cannon", [1, 5])
+bubble = Moves("Bubble", [1, 5])
 
+player_moves = {
+    "Fire": fire,
+    "Water": water,
+    "Iron": iron,
+    "Cannon": cannon,
+    "Bubble": bubble
+}
 
-# battle functions
+enemy_moves = [fire, water, iron, cannon, bubble]
+
+# ---------------- CHARACTERS ----------------
+Minion = Player("minion", True, 10, 10, player_moves)
+Labubu = Enemy("Labubu", True, 10, 10, enemy_moves)
+
+# ---------------- BATTLE ----------------
 def battle(player, enemy):
-    attack = 1
-
     print(f"{player.name} is battling with {enemy.name}.")
 
-    while player.health > 0 and enemy.health > 0 :
-        #enemy.health -= player.attack
+    while player.health > 0 and enemy.health > 0:
+
+        # Player turn
         player.use_move(enemy)
-        print(f"{player.name} do the attacks on {enemy.name}.")
 
         if enemy.health <= 0:
-            print(f"{enemy.name} was loose in this battle.")
+            print(f"{enemy.name} was defeated!")
             break
-        
-        #player.health -= enemy.attack
+
+        # Enemy turn
         enemy.attack(player)
-        print(f"{enemy.name} attacks on you.")
 
         if player.health <= 0:
-            print(f"{player.name} was loose in this battle!")
-            break 
+            print(f"{player.name} was defeated!")
+            break
+
 
 battle(Minion, Labubu)

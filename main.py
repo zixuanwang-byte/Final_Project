@@ -15,43 +15,66 @@ test_char2.attack(test_char1)
 test_char1.view_health()
 test_char2.view_health()'''
 
-battle_attacks = {
-    "minion_banana" :[
-        "Fire Banana", 
-        "Water Banana", 
-        "Iron Fail Banana", 
-        "Cannon Banana", 
-        "Bubble Banana"]}
-    
-Labubu_ball = [ "Bubble ball", "Iron Fail ball", "Cannon ball", "Fire ball", "Water ball"]
 
-minion_attacks = {"Bubble": "Bubble Banana", "Water": "Water Banana", "Iron": "Iron Fail Banana",
-                 "Fire": "Fire Banana", "Cannon": "Cannon Banana"}
+# ---------------- MOVES ----------------
+fire = Moves("Fire Banana", [1, 5])
+water = Moves("Water Banana", [1, 5])
+iron = Moves("Iron Fail Banana", [1, 5])
+cannon = Moves("Cannon Banana", [1, 5])
+bubble = Moves("Bubble Banana", [1, 5])
 
-def battle_atttacks():
-    print("\n Which Banana type you like to use for attack?")
+# Player moves (dictionary required by Player class)
+player_moves = {
+    "Fire": fire,
+    "Water": water,
+    "Iron": iron,
+    "Cannon": cannon,
+    "Bubble": bubble
+}
+
+# Enemy moves (list required by Enemy class)
+enemy_moves = [fire, water, iron, cannon, bubble]
+
+# ---------------- CHARACTERS ----------------
+Minion = Player("Minion", True, 10, 10, player_moves)
+Labubu = Enemy("Labubu", True, 10, 10, enemy_moves)
+
+# ---------------- BATTLE ATTACK MENU ----------------
+minion_attacks = {
+    "Bubble": "Bubble Banana",
+    "Water": "Water Banana",
+    "Iron": "Iron Fail Banana",
+    "Fire": "Fire Banana",
+    "Cannon": "Cannon Banana"
+}
+
+def battle_attacks():
+    print("\nWhich Banana type would you like to use for attack?")
     for option in minion_attacks:
         print(f" - {option}")
-    choice = input("choice: ")
+
+    choice = input("Choice: ").capitalize()
+
     if choice in minion_attacks:
-        minion_attacks[choice]()
+        print(f"You used {minion_attacks[choice]}!")
     else:
-        print("Sorry this option is not valid. Please try again.")
-print(battle_attacks)
+        print("Invalid option!")
 
-def move(self, direction):
+# ---------------- MOVEMENT (FIXED) ----------------
+def move(character, direction):
     if direction == "north":
-        self.x += 1
-    elif direction == "east":
-        self.x -= 1
+        character.y += 1
     elif direction == "south":
-        self.y += 1
+        character.y -= 1
+    elif direction == "east":
+        character.x += 1
     elif direction == "west":
-        self.y -= 1
-    
-    print(f"{self.name} moved to the {direction}.")
+        character.x -= 1
 
-player = Player("Minion")
+    print(f"{character.name} moved {direction}.")
 
-player.move("north")
-player.move("west")
+# ---------------- TEST ----------------
+battle_attacks()
+
+move(Minion, "north")
+move(Minion, "west")
