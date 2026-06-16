@@ -1,19 +1,11 @@
-'''from tabulate import tabulate
-
-map = [["Zimomo's soldiers", "", "Artic Battlefeild", "", "Minions"],
+map_ = [["Zimomo's soldiers", "", "Artic Battlefeild", "", "Minions"],
     ["Zimomo's soldiers", "Zimomo", "Artic Battlefeild", "Scarlett Overkill", "Minions"],
     ["Zimomo's soldiers", "", "Artic Battlefeild", "", "Minions"]
     ]
-headers = ["  West", "", "  Center","", "  East"]
 
-print(tabulate(map, headers=headers, tablefmt="fancy_grid", stralign="center"))
-'''
-from tabulate import tabulate
 
-map = [["Zimomo's soldiers", "", "Artic Battlefeild", "", "Minions"],
-    ["Zimomo's soldiers", "Zimomo", "Artic Battlefeild", "Scarlett Overkill", "Minions"],
-    ["Zimomo's soldiers", "", "Artic Battlefeild", "", "Minions"]
-    ]
-headers = ["  West", "", "  Center","", "  East"]
-
-print(tabulate(map, headers=headers, tablefmt="fancy_grid", stralign="center"))
+for row in map_:
+    new_list = []
+    for item in row:
+        new_list.append(item + " "*(18-len(item)))
+    print("|".join(new_list))

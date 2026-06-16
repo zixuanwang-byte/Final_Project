@@ -79,9 +79,9 @@ class Player(Character):
             if player_choice in self.moves.keys():
                 chosen_move = self.moves[player_choice]
                 damage_dealt = chosen_move.get_damage()
-                target.take_damage(damage_dealt)
                 print(f"\nYou use {chosen_move} and deal {damage_dealt} "
                       + f"damage to {target}!")
+                target.take_damage(damage_dealt)
                 break
             else:
                 print("u stoopid")
@@ -109,6 +109,6 @@ class Enemy(Character):
         '''
         chosen_move = choice(self.moves)
         damage_dealt = chosen_move.get_damage()
-        target.take_damage(damage_dealt)
         print(f"\n{self} attacks you with {chosen_move} and deals "
               + f"{damage_dealt} damage!")
+        target.take_damage(damage_dealt)
